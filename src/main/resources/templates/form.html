@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Input</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .form-container { width: 400px; }
+        input[type="text"] { width: 100%; padding: 8px; margin: 10px 0; }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h3>Form Input Mahasiswa</h3>
+    <form action="/submit-form" method="post">
+        <label>Nama:</label>
+        <input type="text" name="nama" required>
+
+        <label>NIM:</label>
+        <input type="text" name="nim" required>
+
+        <label>Jenis Kelamin:</label><br><br>
+        <input type="radio" name="jenisKelamin" value="Laki-laki" id="l" required> <label for="l">Laki-laki</label><br>
+        <input type="radio" name="jenisKelamin" value="Perempuan" id="p"> <label for="p">Perempuan</label><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="/home">Kembali ke Home</a>
+</div>
+</body>
+</html>
