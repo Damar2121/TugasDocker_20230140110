@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #007bff; color: white; }
+        .header-info { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+<div class="header-info">
+    <h2>MY Website - Damar Sadewa Putra Purwanta (20230140110)</h2>
+    <p>Selamat datang di aplikasi!</p>
+    <a href="/form">+ Input Data Mahasiswa</a>
+</div>
+
+<h4>Data Mahasiswa</h4>
+<table>
+    <thead>
+    <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Jenis Kelamin</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${#lists.isEmpty(listData)}">
+        <td colspan="4" style="text-align: center;">Belum ada data</td>
+    </tr>
+    <tr th:each="u, stat : ${listData}">
+        <td th:text="${stat.count}">1</td>
+        <td th:text="${u.nama}">Nama</td>
+        <td th:text="${u.nim}">NIM</td>
+        <td th:text="${u.jenisKelamin}">Jenis Kelamin</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<a href="/logout">Logout</a>
+</body>
+</html>
