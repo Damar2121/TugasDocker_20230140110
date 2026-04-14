@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot Berjalan!</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f7f9fc; }
+        h1 { color: #2c3e50; }
+        p { font-size: 1.2em; color: #34495e; }
+        .success { color: #27ae60; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Selamat, Server Berjalan! 🎉</h1>
+    <p class="success" th:text="${message}">Pesan akan muncul di sini</p>
+    <p>Ini adalah halaman utama aplikasimu.</p>
+</body>
+</html>

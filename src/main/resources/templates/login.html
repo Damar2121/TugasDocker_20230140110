@@ -13,6 +13,7 @@
 <body>
 <div class="login-box">
     <h3>Login Page</h3>
+    <p th:if="${error}" th:text="${error}" style="color: red; font-size: 14px;"></p>
     <form action="/login" method="post">
         <label>Username:</label>
         <input type="text" name="username" required>
